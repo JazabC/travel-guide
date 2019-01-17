@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+    <title>Travel Guide</title>
+    <style>
+        #myHeader {
+            background-color: lightblue;
+            color: black;
+            padding: 40px;
+            text-align: center;
+} 
+    </style>
+     
+
+<h1 id="myHeader">Travel Guide!</h1>
+    </head>
+    <body>
+        <script>
+        var a = document.getElementById("TEST");
+        function getLocation() {
+        if (navigator.geolocation) {
+        navigator.geolocation.currentPosition(showPosition);
+    } else {
+    a.innerHTML = "Please update your browser or try on a differet browser.";
+           }
+    }
+        function showPosition(position) {
+        a.innerHTML = "Latitude: " + position.coords.latitude + 
+        "<br>Longitude: " + position.coords.longitude; 
+}
+    </script>
+        <strong>Find Places to Visit!</strong>
+        <em>READ BELOW!</em>
+    </body>
+</html>
